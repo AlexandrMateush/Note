@@ -19,6 +19,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig extends SecurityConfigurerAdapter {
+    
 
     @Bean
     public UserDetailsService userDetailsService() {
