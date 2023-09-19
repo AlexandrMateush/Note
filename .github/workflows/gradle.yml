@@ -29,4 +29,6 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
     - name: Build with Gradle
-      run: ./gradlew build --no-daemon
+      run: |
+       chmod +x /home/runner/work/Note/gradlew
+        ./gradlew build --no-daemon
