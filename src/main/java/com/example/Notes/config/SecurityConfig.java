@@ -48,7 +48,7 @@ public class SecurityConfig extends SecurityConfigurerAdapter {
                     logout.logoutSuccessUrl("/login");
                     logout.deleteCookies();
                 }).authorizeHttpRequests(authorise -> {
-                    authorise.requestMatchers("/login").permitAll();
+                    authorise.requestMatchers("/login", "/static/**").permitAll();
                     authorise.anyRequest().authenticated();
                 });
         return http.build();
